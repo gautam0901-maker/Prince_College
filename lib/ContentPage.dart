@@ -7,8 +7,9 @@ import 'dart:convert';
 
 import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
-
 import 'google_sign_in.dart';
+
+import 'InAppwebview.dart';
 
 const _url = 'https://psvpec.in';
 final FirebaseAuth _auth = FirebaseAuth.instance;
@@ -138,7 +139,11 @@ class ContentPage extends StatelessWidget {
                         height: 100,
                         child: new FlatButton(
                           onPressed: () {
-                            launch(_url);
+                            //launch(_url);
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => Inappwebview()));
                           },
                           child: Align(
                             alignment: Alignment.centerLeft,

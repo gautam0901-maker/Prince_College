@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:college/ContentPage.dart';
 import 'package:college/Settings.dart';
+import 'package:college/bottombarpage.dart';
 import 'package:college/google_sign_in.dart';
 import 'package:college/sign_up_wigdget.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -37,7 +38,7 @@ class _LoginState extends State<Login> {
               if (provider.isSigningIn) {
                 return buildLoading();
               } else if (snapshot.hasData) {
-                return ContentPage();
+                return BottomBar();
               } else {
                 return SignUpWidget();
               }
