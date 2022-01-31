@@ -1,3 +1,4 @@
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:college/Google_Sign_up_widget.dart';
 import 'package:college/google_sign_in.dart';
 import 'package:flutter/gestures.dart';
@@ -9,43 +10,47 @@ class SignUpWidget extends StatelessWidget {
   Widget build(BuildContext context) => buildSignUp();
 
   Widget buildSignUp() => Column(
-    children: [
-      Spacer(),
-    Row(
-      children: [
-        Container(
-  decoration: new BoxDecoration(
-
-    image: new DecorationImage(image: new AssetImage('images/prince1PSVPEC.jpg'),
-
-    ),
-  ),
-          margin : EdgeInsets.symmetric(horizontal :20),
-          width : 175,
-        child: Text(
-           'Welcome To   Prince College ',
-   style : TextStyle(
-          color : Colors.black,
-  fontSize : 42,
-   fontWeight : FontWeight.bold,
-          )
-          )
+        children: [
+          Spacer(),
+          Row(
+            children: [
+              Container(
+                margin: EdgeInsets.symmetric(horizontal: 20),
+                width: 175,
+                child: AnimatedTextKit(
+                  animatedTexts: [
+                    TyperAnimatedText('Welcome To   Price College',
+                        textStyle: TextStyle(
+                          color: Colors.black,
+                          fontSize: 42,
+                          fontWeight: FontWeight.bold,
+                        ))
+                  ],
+                ),
+              ),
+              new Container(
+                child: new Image.asset(
+                  'images/prince1PSVPEC.jpg',
+                  height: 60.0,
+                  fit: BoxFit.cover,
+                ),
+              ),
+            ],
           ),
-      ],
-    ),
-
-
-      Spacer(),
-      GoogleSignInButtonWidget(),
-      SizedBox(height: 20,),
-      Text('Login to countinue',
-     style: TextStyle(fontSize: 16,
-     fontWeight: FontWeight.bold,
-       color: Colors.black,
-     ),
-      ),
-      Spacer(),
-    ],
-  );
+          Spacer(),
+          GoogleSignInButtonWidget(),
+          SizedBox(
+            height: 20,
+          ),
+          Text(
+            'Login to countinue',
+            style: TextStyle(
+              fontSize: 16,
+              fontWeight: FontWeight.bold,
+              color: Colors.black26,
+            ),
+          ),
+          Spacer(),
+        ],
+      );
 }
-
