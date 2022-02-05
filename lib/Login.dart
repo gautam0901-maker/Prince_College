@@ -19,15 +19,7 @@ class _LoginState extends State<Login> {
   Widget build(BuildContext context) {
     return MaterialApp(
         home: Scaffold(
-      backgroundColor: Colors.red,
-      appBar: AppBar(
-        backgroundColor: Colors.black12,
-        title: Text(
-          'PSVPEC',
-          style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
-        ),
-        centerTitle: true,
-      ),
+      backgroundColor: Colors.white,
       body: ChangeNotifierProvider(
         create: (context) => GoogleSignInProvider(),
         child: StreamBuilder(

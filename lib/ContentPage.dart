@@ -26,218 +26,230 @@ class ContentPage extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        backgroundColor: Colors.white,
-        body: Column(
-          children: [
-            Row(
-              children: <Widget>[
-                SizedBox(
-                  height: 24,
-                ),
-                Column(
-                  children: [
-                    Padding(
-                      padding: EdgeInsets.all(8.0),
-                      child: new Container(
-                        child: new CircleAvatar(
-                          backgroundImage:
-                              new AssetImage('images/prince1PSVPEC.jpg'),
-                          radius: 80.0,
+        appBar: AppBar(
+          backgroundColor: Color(0xff750000),
+          title: Text('PSVPEC'),
+          centerTitle: true,
+        ),
+        backgroundColor: Colors.red,
+        body: SingleChildScrollView(
+          child: Column(
+            children: [
+              Container(
+                color: Colors.grey,
+                child: Row(
+                  children: <Widget>[
+                    SizedBox(
+                      height: 24,
+                    ),
+                    Column(
+                      children: [
+                        Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: new Container(
+                            child: new CircleAvatar(
+                              backgroundImage:
+                                  new AssetImage('images/prince1PSVPEC.jpg'),
+                              radius: 80.0,
+                            ),
+                          ),
                         ),
+                      ],
+                    ),
+                    Scrollbar(
+                      child: Column(
+                        children: [
+                          SizedBox(
+                            height: 0.1,
+                          ),
+                          Row(
+                            children: [
+                              Padding(
+                                padding: EdgeInsets.all(16),
+                                child: Text(
+                                  'Welcome , ',
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    color: Colors.black,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                          Row(
+                            children: <Widget>[
+                              Padding(
+                                padding: EdgeInsets.all(2.0),
+                                child: Text(
+                                  name,
+                                  textAlign: TextAlign.justify,
+                                  overflow: TextOverflow.ellipsis,
+                                  maxLines: 3,
+                                  style: TextStyle(
+                                    fontSize: 25,
+                                    fontWeight: FontWeight.w900,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
                       ),
                     ),
                   ],
                 ),
-                Column(
-                  children: [
-                    SizedBox(
-                      height: 0.1,
-                    ),
-                    Row(
-                      children: [
-                        Padding(
-                          padding: EdgeInsets.all(16),
-                          child: Text(
-                            'Welcome , ',
-                            style: TextStyle(
-                              fontSize: 20,
-                              color: Colors.black,
-                            ),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Expanded(
+                      child: Container(
+                          decoration: BoxDecoration(
+                            color: Colors.pink,
+                            borderRadius: BorderRadius.all(Radius.circular(30)),
                           ),
-                        ),
-                      ],
-                    ),
-                    Row(
-                      children: <Widget>[
-                        Padding(
-                          padding: EdgeInsets.all(2.0),
-                          child: Text(
-                            name,
-                            textAlign: TextAlign.justify,
-                            overflow: TextOverflow.ellipsis,
-                            maxLines: 3,
-                            style: TextStyle(
-                              fontSize: 25,
-                              fontWeight: FontWeight.w900,
+                          height: 100,
+                          child: new FlatButton(
+                            onPressed: () {
+                              print('hii');
+                            },
+                            child: Align(
+                              alignment: Alignment.centerLeft,
+                              child: Text(
+                                '  Circular ',
+                                style: TextStyle(
+                                  fontSize: 35,
+                                  color: Colors.black,
+                                ),
+                              ),
                             ),
-                          ),
-                        ),
-                      ],
-                    ),
+                          )),
+                      flex: 100,
+                    )
                   ],
                 ),
-              ],
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  Expanded(
-                    child: Container(
-                        decoration: BoxDecoration(
-                          color: Colors.pink,
-                          borderRadius: BorderRadius.all(Radius.circular(30)),
-                        ),
-                        height: 100,
-                        child: new FlatButton(
-                          onPressed: () {
-                            print('hii');
-                          },
-                          child: Align(
-                            alignment: Alignment.centerLeft,
-                            child: Text(
-                              '  Circular ',
-                              style: TextStyle(
-                                fontSize: 35,
-                                color: Colors.black,
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Expanded(
+                      child: Container(
+                          decoration: BoxDecoration(
+                            color: Colors.pink,
+                            borderRadius: BorderRadius.all(Radius.circular(30)),
+                          ),
+                          height: 100,
+                          child: new FlatButton(
+                            onPressed: () {
+                              //launch(_url);
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => Inappwebview()));
+                            },
+                            child: Align(
+                              alignment: Alignment.centerLeft,
+                              child: Text(
+                                'Website',
+                                style: TextStyle(
+                                  fontSize: 35,
+                                  color: Colors.black,
+                                ),
                               ),
                             ),
-                          ),
-                        )),
-                    flex: 100,
-                  )
-                ],
+                          )),
+                      flex: 100,
+                    )
+                  ],
+                ),
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  Expanded(
-                    child: Container(
-                        decoration: BoxDecoration(
-                          color: Colors.pink,
-                          borderRadius: BorderRadius.all(Radius.circular(30)),
-                        ),
-                        height: 100,
-                        child: new FlatButton(
-                          onPressed: () {
-                            //launch(_url);
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => Inappwebview()));
-                          },
-                          child: Align(
-                            alignment: Alignment.centerLeft,
-                            child: Text(
-                              'Website',
-                              style: TextStyle(
-                                fontSize: 35,
-                                color: Colors.black,
-                              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Expanded(
+                      child: Container(
+                          decoration: BoxDecoration(
+                            color: Colors.blue,
+                            borderRadius: BorderRadius.all(
+                              Radius.circular(30),
                             ),
                           ),
-                        )),
-                    flex: 100,
-                  )
-                ],
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  Expanded(
-                    child: Container(
-                        decoration: BoxDecoration(
-                          color: Colors.blue,
-                          borderRadius: BorderRadius.all(
-                            Radius.circular(30),
-                          ),
-                        ),
-                        height: 100,
-                        child: new FlatButton(
-                          onPressed: () {
-                            final provider = Provider.of<GoogleSignInProvider>(
-                                context,
-                                listen: false);
-                            provider.logout();
-                          },
-                          child: Align(
-                            alignment: Alignment.centerLeft,
-                            child: Text(
-                              'SignOut  ',
-                              style: TextStyle(
-                                fontSize: 35,
-                                color: Colors.black,
+                          height: 100,
+                          child: new FlatButton(
+                            onPressed: () {
+                              final provider =
+                                  Provider.of<GoogleSignInProvider>(context,
+                                      listen: false);
+                              provider.logout();
+                            },
+                            child: Align(
+                              alignment: Alignment.centerLeft,
+                              child: Text(
+                                'SignOut  ',
+                                style: TextStyle(
+                                  fontSize: 35,
+                                  color: Colors.black,
+                                ),
                               ),
                             ),
-                          ),
-                        )),
-                    flex: 100,
-                  )
-                ],
+                          )),
+                      flex: 100,
+                    )
+                  ],
+                ),
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  Expanded(
-                    child: Container(
-                        decoration: BoxDecoration(
-                          color: Colors.green,
-                          borderRadius: BorderRadius.all(
-                            Radius.circular(30),
-                          ),
-                        ),
-                        height: 100,
-                        child: new FlatButton(
-                          onPressed: () {
-                            Navigator.push(
-                                context,
-                                CupertinoPageRoute(
-                                    builder: (context) => Phone()));
-                          },
-                          child: Align(
-                            alignment: Alignment.centerLeft,
-                            child: Text(
-                              'Contact Us ',
-                              style: TextStyle(
-                                fontSize: 35,
-                                color: Colors.black,
-                              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Expanded(
+                      child: Container(
+                          decoration: BoxDecoration(
+                            color: Colors.green,
+                            borderRadius: BorderRadius.all(
+                              Radius.circular(30),
                             ),
                           ),
-                        )),
-                    flex: 100,
-                  )
-                ],
+                          height: 100,
+                          child: new FlatButton(
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  CupertinoPageRoute(
+                                      builder: (context) => Phone()));
+                            },
+                            child: Align(
+                              alignment: Alignment.centerLeft,
+                              child: Text(
+                                'Contact Us ',
+                                style: TextStyle(
+                                  fontSize: 35,
+                                  color: Colors.black,
+                                ),
+                              ),
+                            ),
+                          )),
+                      flex: 100,
+                    )
+                  ],
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

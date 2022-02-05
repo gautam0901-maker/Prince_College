@@ -19,7 +19,7 @@ class SignUpWidget extends StatelessWidget {
                 width: 175,
                 child: AnimatedTextKit(
                   animatedTexts: [
-                    TyperAnimatedText('Welcome To   Price College',
+                    TyperAnimatedText('Welcome To PSVPEC',
                         textStyle: TextStyle(
                           color: Colors.black,
                           fontSize: 42,
@@ -29,10 +29,9 @@ class SignUpWidget extends StatelessWidget {
                 ),
               ),
               new Container(
-                child: new Image.asset(
-                  'images/prince1PSVPEC.jpg',
-                  height: 60.0,
-                  fit: BoxFit.cover,
+                child: new CircleAvatar(
+                  backgroundImage: new AssetImage('images/prince1PSVPEC.jpg'),
+                  radius: 75.0,
                 ),
               ),
             ],
