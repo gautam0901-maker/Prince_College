@@ -19,7 +19,8 @@ class _LoginState extends State<Login> {
   Widget build(BuildContext context) {
     return MaterialApp(
         home: Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Color(0xff0A6CBF),
+      // backgroundColor: Color(0xff8BBBDD),
       body: ChangeNotifierProvider(
         create: (context) => GoogleSignInProvider(),
         child: StreamBuilder(
@@ -41,7 +42,7 @@ class _LoginState extends State<Login> {
 
   Widget buildLoading() => Center(
         child: CircularProgressIndicator(
-          color: Colors.pinkAccent,
+          color: Colors.red,
         ),
       );
 }

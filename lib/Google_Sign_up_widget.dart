@@ -25,7 +25,7 @@ class GoogleSignInButtonWidget extends StatelessWidget {
           textColor: Colors.blue,
           icon: Icon(
             Icons.account_circle_outlined,
-            color: Colors.blue,
+            color: Colors.grey,
           ),
           onPressed: () {
             final provider =

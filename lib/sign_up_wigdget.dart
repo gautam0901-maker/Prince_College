@@ -1,7 +1,5 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:college/Google_Sign_up_widget.dart';
-import 'package:college/google_sign_in.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -21,7 +19,7 @@ class SignUpWidget extends StatelessWidget {
                   animatedTexts: [
                     TyperAnimatedText('Welcome To PSVPEC',
                         textStyle: TextStyle(
-                          color: Colors.black,
+                          color: Colors.white,
                           fontSize: 42,
                           fontWeight: FontWeight.bold,
                         ))
@@ -46,7 +44,7 @@ class SignUpWidget extends StatelessWidget {
             style: TextStyle(
               fontSize: 16,
               fontWeight: FontWeight.bold,
-              color: Colors.black26,
+              color: Color(0xffA2CDEC),
             ),
           ),
           Spacer(),
