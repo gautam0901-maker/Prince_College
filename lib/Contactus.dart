@@ -29,6 +29,14 @@ class Phone extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
+        appBar: AppBar(
+          actions: <Widget>[
+            new IconButton(
+              icon: new Icon(Icons.close),
+              onPressed: () => Navigator.of(context).pop(null),
+            ),
+          ],
+        ),
         body: SafeArea(
           child: Column(
             children: [

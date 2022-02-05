@@ -26,6 +26,37 @@ class ContentPage extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
+        drawer: Drawer(
+          child: ListView(
+            // Important: Remove any padding from the ListView.
+            padding: EdgeInsets.zero,
+            children: [
+              const DrawerHeader(
+                decoration: BoxDecoration(
+                  color: Color(0xff750000),
+                ),
+                child: Text(
+                  'Menu',
+                  style: TextStyle(fontSize: 20),
+                ),
+              ),
+              ListTile(
+                title: const Text('Settings'),
+                onTap: () {
+                  Navigator.push(context,
+                      CupertinoPageRoute(builder: (context) => SettingsPage()));
+                },
+              ),
+              ListTile(
+                title: const Text('Contact Us'),
+                onTap: () {
+                  Navigator.push(context,
+                      CupertinoPageRoute(builder: (context) => Phone()));
+                },
+              ),
+            ],
+          ),
+        ),
         appBar: AppBar(
           backgroundColor: Color(0xff750000),
           title: Text('PSVPEC'),
