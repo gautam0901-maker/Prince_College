@@ -190,7 +190,7 @@ class ContentPage extends StatelessWidget {
                             child: Align(
                               alignment: Alignment.centerLeft,
                               child: Text(
-                                'Website',
+                                'Direction',
                                 style: TextStyle(
                                   fontSize: 35,
                                   color: Colors.black,
