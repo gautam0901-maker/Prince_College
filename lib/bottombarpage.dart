@@ -1,5 +1,6 @@
 import 'package:college/Contactus.dart';
 import 'package:college/ContentPage.dart';
+import 'package:college/News/news.dart';
 import 'package:college/Settings.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
@@ -31,7 +32,7 @@ class _BottomBarState extends State<BottomBar> {
   final List<Widget> _children = [
     ContentPage(),
     Phone(),
-    SettingsPage(),
+    Home(),
   ];
   @override
   Widget build(BuildContext context) {
