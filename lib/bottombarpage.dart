@@ -1,6 +1,7 @@
 import 'package:college/Contactus.dart';
 import 'package:college/ContentPage.dart';
 import 'package:college/Settings.dart';
+import 'package:college/home_page.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -29,7 +30,7 @@ class _BottomBarState extends State<BottomBar> {
 
   int _currentIndex = 0;
   final List<Widget> _children = [
-    ContentPage(),
+    HomePage(),
     Phone(),
     SettingsPage(),
   ];
@@ -39,7 +40,7 @@ class _BottomBarState extends State<BottomBar> {
       home: Scaffold(
         body: _children[_currentIndex],
         bottomNavigationBar: BottomNavigationBar(
-          backgroundColor: Colors.white,
+          backgroundColor: Colors.blue.shade300,
           onTap: OnTappedBar,
           items: [
             BottomNavigationBarItem(
@@ -56,11 +57,11 @@ class _BottomBarState extends State<BottomBar> {
             ),
             BottomNavigationBarItem(
               icon: new Icon(
-                Icons.call,
+                Icons.info,
                 color: Colors.black,
               ),
               title: new Text(
-                "Contact",
+                "About Us",
                 style: TextStyle(color: Colors.black),
               ),
             ),
