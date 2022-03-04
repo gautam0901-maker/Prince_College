@@ -1,3 +1,4 @@
+import 'package:college/GooglesigninProvider.dart';
 import 'package:college/google_sign_in.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -25,7 +26,7 @@ class GoogleSignInButtonWidget extends StatelessWidget {
           textColor: Colors.blue,
           icon: Icon(
             Icons.account_circle_outlined,
-            color: Colors.grey,
+            color: Colors.white38,
           ),
           onPressed: () {
             final provider =

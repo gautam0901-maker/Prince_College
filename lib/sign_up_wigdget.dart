@@ -11,25 +11,37 @@ class SignUpWidget extends StatelessWidget {
         children: [
           Spacer(),
           Row(
+            mainAxisAlignment:
+                MainAxisAlignment.center, //Center Row contents horizontally,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              new Container(
+                child: new CircleAvatar(
+                  backgroundImage: new AssetImage('images/prince.png'),
+                  radius: 75.0,
+                ),
+              ),
+            ],
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Container(
                 margin: EdgeInsets.symmetric(horizontal: 20),
                 width: 175,
                 child: AnimatedTextKit(
                   animatedTexts: [
-                    TyperAnimatedText('Welcome To PSVPEC',
+                    TyperAnimatedText('PSVPEC',
                         textStyle: TextStyle(
                           color: Colors.white,
                           fontSize: 42,
                           fontWeight: FontWeight.bold,
                         ))
                   ],
-                ),
-              ),
-              new Container(
-                child: new CircleAvatar(
-                  backgroundImage: new AssetImage('images/prince1PSVPEC.jpg'),
-                  radius: 75.0,
                 ),
               ),
             ],

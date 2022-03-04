@@ -1,11 +1,11 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:college/ContentPage.dart';
+import 'package:college/GooglesigninProvider.dart';
 import 'package:college/Settings.dart';
 import 'package:college/bottombarpage.dart';
 import 'package:college/google_sign_in.dart';
 import 'package:college/sign_up_wigdget.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 

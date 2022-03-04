@@ -1,4 +1,5 @@
 import 'package:college/Contactus.dart';
+import 'package:college/GooglesigninProvider.dart';
 import 'package:college/Settings.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';

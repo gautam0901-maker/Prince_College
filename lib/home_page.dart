@@ -1,6 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:college/GooglesigninProvider.dart';
 import 'package:college/InAppwebview.dart';
 import 'package:college/Settings.dart';
+import 'package:college/circular.dart';
 import 'package:college/inAppwebsite.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -30,7 +32,7 @@ class HomePage extends StatelessWidget {
                 context,
                 MaterialPageRoute(
                   builder: (context) {
-                    return SettingsPage();
+                    return HomePage1();
                   },
                 ),
               );
