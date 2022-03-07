@@ -48,23 +48,16 @@ class _BottomBarState extends State<BottomBar> {
                 Icons.home,
                 color: Colors.black,
               ),
-              title: new Text(
-                "Home",
-                style: TextStyle(
-                  color: Colors.black,
-                ),
-              ),
+              label: "Home",
             ),
             BottomNavigationBarItem(
               icon: new Icon(
                 Icons.info,
                 color: Colors.black,
               ),
-              title: new Text(
-                "About Us",
-                style: TextStyle(color: Colors.black),
-              ),
+              label: "About Us",
             ),
+
             /*  BottomNavigationBarItem(
               icon: new Icon(
                 Icons.call,
@@ -78,10 +71,8 @@ class _BottomBarState extends State<BottomBar> {
             ),*/
             BottomNavigationBarItem(
               icon: new Icon(Icons.settings, color: Colors.black),
-              title: new Text(
-                "Settings",
-                // style: TextStyle(color: Colors.white),
-              ),
+              label: "Settings",
+              // style: TextStyle(color: Colors.white),
             ),
           ],
         ),
