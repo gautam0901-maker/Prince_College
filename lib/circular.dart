@@ -32,23 +32,54 @@ class _HomePage1State extends State<HomePage1> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
+      appBar: AppBar(
+        backgroundColor: Colors.blue,
+        centerTitle: true,
+        title: Text('Circular'),
+      ),
+      body: Container(
+        color: Colors.white10,
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
-              "Flutter Notification Details",
-              style: Theme.of(context).textTheme.headline4,
+            SizedBox(
+              height: 20,
             ),
-            const SizedBox(height: 20),
-            Text(
-              "Notification Title:-  $notificationTitle",
-              style: Theme.of(context).textTheme.headline6,
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Text(
+                  "Notification",
+                  style: TextStyle(
+                    fontSize: 30,
+                    fontWeight: FontWeight.w400,
+                  ),
+                ),
+                const SizedBox(height: 20),
+              ],
             ),
-            Text(
-              "Notification Body:-  $notificationBody",
-              style: Theme.of(context).textTheme.headline6,
+            SizedBox(
+              height: 30,
             ),
+            Row(
+              children: [
+                Text(
+                  "$notificationTitle",
+                  style: Theme.of(context).textTheme.headline4,
+                ),
+              ],
+            ),
+            SizedBox(
+              height: 18,
+            ),
+            Row(
+              children: [
+                Text(
+                  "$notificationBody",
+                  style: Theme.of(context).textTheme.headline6,
+                ),
+              ],
+            )
           ],
         ),
       ),

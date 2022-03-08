@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:college/Contactus.dart';
 import 'package:college/GooglesigninProvider.dart';
 import 'package:college/InAppwebview.dart';
 import 'package:college/Settings.dart';
@@ -54,7 +55,7 @@ class HomePage extends StatelessWidget {
             context,
             () {
               Navigator.push(context, MaterialPageRoute(builder: (context) {
-                return SettingsPage();
+                return Phone();
               }));
             },
             "Contact us",
