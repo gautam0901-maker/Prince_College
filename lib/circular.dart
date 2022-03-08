@@ -48,11 +48,13 @@ class _HomePage1State extends State<HomePage1> {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Text(
-                  "Notification",
-                  style: TextStyle(
-                    fontSize: 30,
-                    fontWeight: FontWeight.w400,
+                Expanded(
+                  child: Text(
+                    "Notification",
+                    style: TextStyle(
+                      fontSize: 30,
+                      fontWeight: FontWeight.w400,
+                    ),
                   ),
                 ),
                 const SizedBox(height: 20),
@@ -63,9 +65,25 @@ class _HomePage1State extends State<HomePage1> {
             ),
             Row(
               children: [
-                Text(
-                  "$notificationTitle",
-                  style: Theme.of(context).textTheme.headline4,
+                Expanded(
+                  child: Text(
+                    "$notificationTitle",
+                    style: Theme.of(context).textTheme.headline4,
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(
+              height: 5,
+            ),
+            Row(
+              children: [
+                Container(
+                  decoration: BoxDecoration(
+                    border: Border(
+                      bottom: BorderSide(width: 1.0, color: Colors.black),
+                    ),
+                  ),
                 ),
               ],
             ),
@@ -74,9 +92,11 @@ class _HomePage1State extends State<HomePage1> {
             ),
             Row(
               children: [
-                Text(
-                  "$notificationBody",
-                  style: Theme.of(context).textTheme.headline6,
+                Expanded(
+                  child: Text(
+                    "$notificationBody",
+                    style: Theme.of(context).textTheme.headline6,
+                  ),
                 ),
               ],
             )
