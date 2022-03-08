@@ -3,6 +3,7 @@ import 'package:college/Contactus.dart';
 import 'package:college/GooglesigninProvider.dart';
 import 'package:college/InAppwebview.dart';
 import 'package:college/Settings.dart';
+import 'package:college/chat_screen.dart';
 import 'package:college/circular.dart';
 import 'package:college/inAppwebsite.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -95,7 +96,7 @@ class HomePage extends StatelessWidget {
             context,
             () {
               Navigator.push(context, MaterialPageRoute(builder: (context) {
-                return SettingsPage();
+                return ChatScreen();
               }));
             },
             "Queries Portal",
