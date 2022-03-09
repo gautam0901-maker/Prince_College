@@ -29,7 +29,7 @@ class _SplashscreenState extends State<Splashscreen> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.black,
+        backgroundColor: Colors.white,
         body: Container(
           constraints: BoxConstraints.expand(),
           child: Column(
@@ -44,6 +44,13 @@ class _SplashscreenState extends State<Splashscreen> {
               Padding(padding: EdgeInsets.only(top: 20.0)),
               SizedBox(
                 height: 20,
+              ),
+              Text(
+                'Prince Group Of Institution',
+                style: TextStyle(
+                    fontWeight: FontWeight.w400,
+                    fontSize: 20,
+                    fontStyle: FontStyle.italic),
               ),
               // SleekCircularSlider(
               //   min: 0,
