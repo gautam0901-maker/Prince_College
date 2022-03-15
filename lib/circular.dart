@@ -76,17 +76,6 @@ class _HomePage1State extends State<HomePage1> {
             SizedBox(
               height: 5,
             ),
-            Row(
-              children: [
-                Container(
-                  decoration: BoxDecoration(
-                    border: Border(
-                      bottom: BorderSide(width: 1.0, color: Colors.black),
-                    ),
-                  ),
-                ),
-              ],
-            ),
             SizedBox(
               height: 18,
             ),
