@@ -96,7 +96,7 @@ class HomePage extends StatelessWidget {
             context,
             () {
               Navigator.push(context, MaterialPageRoute(builder: (context) {
-                return SettingsPage();
+                return ChatScreen();
               }));
             },
             "Queries Portal",
